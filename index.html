@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Oslo Kommune Designverkt&oslash;y</title>
+    <link rel="stylesheet" href="node_modules/paper/examples/css/style.css">
+    <!-- IE 9: display inline SVG -->
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+
+    <style>
+        iframe {
+            border: 1px solid black;
+            float:left;
+        }
+    </style>
+
+    <script type="text/javascript" src="lib/paper-full.js"></script>
+    <script type="text/javascript" src="lib/pdfkit.js"></script>
+    <script type="text/javascript" src="lib/blob-stream.js"></script>
+
+    <script type="text/javascript" src="src/OsloKommuneGenerator.js"></script>
+    <script type="text/javascript" src="src/OsloKommunePDFKit.js"></script>
+    <script type="text/javascript" src="src/OsloKommunePaper.js"></script>
+
+    <script type="text/javascript">
+        // Only executed our code once the DOM is ready.
+        window.onload = function() {
+            drawGrid();
+        }
+
+        function drawGrid() {
+//            testPaper();
+            testGrid();
+            testPDF();
+
+        }
+
+        function testPDF() {
+            generatePDF("iframe");
+        }
+
+    </script>
+
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500">Test</canvas>
+    <iframe width="800" height="1200"></iframe>
+</body>
+</html>
